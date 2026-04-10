@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "엔트리 블록 청소기",
+  "version": "1.4",
+  "description": "보안 오류 없이 엔트리 블록을 청소합니다.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://playentry.org/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["btn_icon.png"],
+      "matches": ["*://playentry.org/*"]
+    }
+  ]
+}
